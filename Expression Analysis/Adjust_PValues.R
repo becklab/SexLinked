@@ -1,3 +1,9 @@
+# Sadhika Malladi, Jonathan Ma
+
+# Adjusts tissue-specific p-values for multiple significance testing
+# Done for normal and tumor p-values
+
+
 Tumor.wilcP=readRDS('WilcoxonRawP_Tumors_6.23.RDS')
 adj.Tumor.wilcP=Tumor.wilcP
 for(i in 1:ncol(Tumor.wilcP))
