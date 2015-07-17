@@ -14,6 +14,7 @@ allCancerTypes=gsub("([a-z]+)_methylation.RDS","\\1",fileNames)
 allCancerTypes=toupper(allCancerTypes)
 
 #since clinical data from cbioportal itself is sparse, need to use master TCGA clinical data file
+#this was generated as a byproduct of Expression Analysis
 clinical.data=readRDS('MasterClinical.RDS')
 #convert clinical data barcodes to standard format by making them uppercase
 clinical.data$barcode <- toupper(clinical.data$barcode)
