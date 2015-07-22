@@ -54,17 +54,11 @@
 												<h2>Available Data</h2>
 											</header>
 											<ul>
-												<li><a href="#">Nulla iaculis egestas varius</a></li>
-												<li><a href="#">Augue massa feugiat quam pretium</a></li>
-												<li><a href="#">Orci sem vel libero cras nisi odio</a></li>
-												<li><a href="#">Sed hendrerit massa nam mattis</a></li>
-												<li><a href="#">Turpis vel leo accumsan aliquet</a></li>
-												<li><a href="#">Dapibus mi fermentum fusce non</a></li>
-												<li><a href="#">Arcu laoreet sapien tempus</a></li>
-												<li><a href="#">Nulla iaculis egestas varius</a></li>
-												<li><a href="#">Augue massa feugiat quam pretium</a></li>
-												<li><a href="#">Orci sem vel libero cras nisi odio</a></li>
-												<li><a href="#">Sed hendrerit massa nam mattis</a></li>
+												<li><a href="#rnaseq">TCGA RNASeqv2 Expression Data</a></li>
+												<li><a href="#clinical">TCGA Clinical Data</a></li>
+												<li><a href="#lincscloudgenes">Lincscloud Input Files</a></li>
+												<li><a href="#expdf">Tumor and Normal Expression</a></li>
+                                                <li><a href="#clindf">Tumor and Normal Clinical Data</a></li>
 											</ul>
 										</section>
 									</div>
@@ -81,7 +75,86 @@
 											</header>
 											<p>This section of the website is still under construction.</p>
 										</article>
-										</div>
+								    </div>
+                                
+                                <hr />
+                                
+                                <div id="rnaseq">
+                                    <article class="box post">
+											<header class="style2">
+												<h2>TCGA RNASeqv2 Expression Data</h2>
+                                                <p>This file has all of the RNA expression data used for differential gene expression analysis. The relevant script is <a href="https://github.com/becklab/SexLinked/blob/master/Expression%20Analysis/Complete_Expression_Analysis.R">here</a>. The file is in .RData format. Note that this data belongs to TCGA, but
+                                                we have merely coerced it into a format compatible with our analyses.</p>
+											</header>
+                                        <p><a href="https://drive.google.com/file/d/0B5nhdIts4CUoamF5VFNMbjJob3c/view?usp=sharing">Download the file.</a></p>
+										</article>
+                                </div>
+                                
+                                <hr />
+                                
+                                <div id="clinical">
+                                    <article class="box post">
+											<header class="style2">
+												<h2>TCGA Clinical Data</h2>
+                                                <p>This file has all of the clinical annotations for patients in TCGA. The file is referenced by numerous scripts in copy number and methylation
+                                                analyses. The file is in .RDS format. Note that this data belongs to TCGA, but we have merely coerced it into a format compatible with our analyses.</p>
+											</header>
+                                        <p><a href="https://drive.google.com/file/d/0B5nhdIts4CUoZ3ZvWmFTWTRrSXc/view?usp=sharing">Download the file.</a></p>
+										</article>
+                                </div>
+                                
+                                <hr />
+                                
+                                <div id="lincscloudgenes">
+                                    <article class="box post">
+											<header class="style2">
+												<h2>Lincscloud Input Files</h2>
+                                                <p>These files have all the inputs to Lincscloud. There are 8 files per cancer. 4 contain Affymetrix IDs, which Lincscloud does not accept but other
+                                                connectivity map services may. The other 4 contain converted HUGO IDs. There are 2 files per sex, one indicating genes up (i.e., resistance signature) and
+                                                the other indicating genes down (i.e., sensitivity signature) in tumors. Note that when inputting lists to Lincscloud, the resistance signature ought to be
+                                                listed under genes down, since you are looking for a perturbagen that down-regulates the resistance signature. All 8 files are contained in folders separated
+                                                by cancer type.</p>
+											</header>
+                                        <p>
+                                            <a href="https://drive.google.com/folderview?id=0B5nhdIts4CUoS0owMDZRalpLNFE&usp=sharing">Head and Neck Squamous Cell Carcinoma (HNSC)</a> <br />
+                                            <a href="https://drive.google.com/folderview?id=0B5nhdIts4CUoc0M2OTVQbU5hZXM&usp=sharing">Kidney Chromophobe (KICH)</a> <br />
+                                            <a href="https://drive.google.com/folderview?id=0B5nhdIts4CUobWotZzRfY1prQWc&usp=sharing">Kidney Renal Clear Cell Carcinoma (KIRC)</a> <br />
+                                            <a href="https://drive.google.com/folderview?id=0B5nhdIts4CUocVlkOXU3YlhvMkk&usp=sharing">Liver Hepatocellular Carcinoma (LIHC)</a> <br />
+                                            <a href="https://drive.google.com/folderview?id=0B5nhdIts4CUoeloxVktud1lGejg&usp=sharing">Lung Adenocarcinoma (LUAD)</a> <br />
+                                            <a href="https://drive.google.com/folderview?id=0B5nhdIts4CUoazYzbFluRVktN1E&usp=sharing">Lung Squamous Cell Carcinoma (LUSC)</a> <br />
+                                            <a href="https://drive.google.com/folderview?id=0B5nhdIts4CUoQk15blhmS1FMclk&usp=sharing">Thyroid Carcinoma (THCA)</a> <br />
+                                            <a href="https://drive.google.com/folderview?id=0B5nhdIts4CUoNzljV1FCUGJocW8&usp=sharing">Pan-Cancer Analyses</a> 
+                                        </p>
+										</article>
+                                </div>
+                                
+                                <hr />
+                                
+                                <div id="expdf">
+                                    <article class="box post">
+											<header class="style2">
+												<h2>Tumor and Normal Expression</h2>
+                                                <p>These files contain all of the tumor (neoplastic) and normal (nonneoplastic) expression from TCGA. These files are specifically used in the Permutation Analysis. Note that this data belongs to TCGA, but we have merely coerced it into a format compatible with our analyses.</p>
+											</header>
+                                        <p>
+                                            <a href="https://drive.google.com/folderview?id=0B0fr4ObVvEsWfm1GOHp6S1I0bk9vUzB4YmtnVzV2OTVZNEttaGlHUWtYTm1fZVVSSDRWSmc&usp=sharing">Download the files.</a>
+                                        </p>
+										</article>
+                                </div>
+                                
+                                <hr />
+                                
+                                <div id="clindf">
+                                    <article class="box post">
+											<header class="style2">
+												<h2>Tumor and Normal Clinical Data</h2>
+                                                <p>These files contain all of the tumor (neoplastic) and normal (nonneoplastic) clinical data from TCGA. These files are specifically used in the Permutation Analysis. Note that this data belongs to TCGA, but we have merely coerced it into a format compatible with our analyses.</p>
+											</header>
+                                        <p>
+                                            <a href="https://drive.google.com/folderview?id=0B5nhdIts4CUobXo0WDRSdXFHOHM&usp=sharing">Download the files.</a>
+                                        </p>
+										</article>
+                                </div>
 
 							</div>
 						</div>
